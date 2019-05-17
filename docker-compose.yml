@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+    nginx:
+        container_name: nginx
+        image: nginx:1.14.0
+        volumes:
+            - ./etc/certs:/opt/nginx/certs
+            - ./etc/conf.d:/etc/nginx/conf.d
+        network_mode: host
